@@ -1,0 +1,35 @@
+{
+  "name": "zipo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ZiPo streaming platform monorepo",
+  "scripts": {
+    "dev": "pnpm --filter @zipo/api dev",
+    "dev:web": "pnpm --filter @zipo/web dev",
+    "dev:web:nsfw": "pnpm --filter @zipo/web dev:nsfw",
+    "dev:web:clean": "pnpm --filter @zipo/web dev:clean",
+    "dev:all": "pnpm --parallel --filter @zipo/api --filter @zipo/web dev",
+    "dev:all:nsfw": "pnpm --parallel --filter @zipo/api --filter @zipo/web dev:nsfw",
+    "dev:all:clean": "pnpm --filter @zipo/web exec node scripts/clean-next.mjs && pnpm --parallel --filter @zipo/api --filter @zipo/web dev",
+    "dev:deps": "docker compose up -d postgres redis minio minio-init",
+    "build": "pnpm -r build",
+    "db:generate": "pnpm --filter @zipo/api db:generate",
+    "db:migrate": "pnpm --filter @zipo/api db:migrate",
+    "db:studio": "pnpm --filter @zipo/api db:studio",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test:security": "pnpm --filter @zipo/api test:security",
+    "test:sdk": "pnpm --filter @zipo/api-client test && pnpm --filter @zipo/auth-ui test",
+    "check:artifacts": "node scripts/check-browser-artifacts.mjs",
+    "check:supply-chain": "node scripts/check-supply-chain.mjs",
+    "pentest:static": "bun test security/pentest/static.test.ts",
+    "pentest:local": "node security/pentest/run-local.mjs",
+    "pentest:local:auto": "node security/pentest/run-with-local-api.mjs",
+    "stream-bridge:dev": "cd services/zipo-stream-bridge && python app.py"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10 <11"
+  },
+  "packageManager": "pnpm@10.34.5"
+}

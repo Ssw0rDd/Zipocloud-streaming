@@ -1,0 +1,40 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      zipo-javascript:
+        patterns: ["*"]
+  - package-ecosystem: pip
+    directory: /services/zipo-stream-bridge
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+  - package-ecosystem: docker
+    directory: /apps/api
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
+  - package-ecosystem: docker
+    directory: /apps/web
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
+  - package-ecosystem: docker
+    directory: /services/zipo-stream-bridge
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2

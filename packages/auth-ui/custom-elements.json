@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "dist/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ZipoAuthElement",
+          "customElement": true,
+          "tagName": "zipo-auth",
+          "attributes": [
+            { "name": "api-base", "type": { "text": "string" } },
+            { "name": "brand", "type": { "text": "string" } },
+            { "name": "locale", "type": { "text": "\"pt\" | \"en\"" } },
+            { "name": "mode", "type": { "text": "\"both\" | \"sign-in\" | \"sign-up\"" } },
+            { "name": "redirect-url", "type": { "text": "string" } }
+          ],
+          "events": [
+            { "name": "zipo-auth-success", "type": { "text": "CustomEvent<ZipoAuthSuccessDetail>" } },
+            { "name": "zipo-auth-error", "type": { "text": "CustomEvent<ZipoAuthErrorDetail>" } }
+          ]
+        }
+      ]
+    }
+  ]
+}

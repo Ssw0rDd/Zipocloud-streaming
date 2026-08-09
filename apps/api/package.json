@@ -1,0 +1,51 @@
+{
+    "name": "@zipo/api",
+    "version": "0.1.0",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": {
+            "types": "./src/index.ts",
+            "import": "./src/index.ts"
+        }
+    },
+    "scripts": {
+        "dev": "bun --env-file=../../.env run --watch src/index.ts",
+        "dev:fresh": "bun --env-file=../../.env run src/index.ts",
+        "start": "bun --env-file=../../.env run src/index.ts",
+        "build": "bun build src/index.ts --outfile dist/index.js --target bun && bun build src/media/worker.ts --outfile dist/media-worker.js --target bun && bun build src/db/migrate.ts --outfile dist/migrate.js --target bun",
+        "typecheck": "tsc --noEmit",
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "bun --env-file=../../.env run src/db/migrate.ts",
+        "db:studio": "drizzle-kit studio",
+        "mapping:override": "bun --env-file=../../.env run src/cli/content-id-override.ts",
+        "test": "bun test",
+        "test:security": "bun test tests/security",
+        "test:integration": "bun test tests/integration",
+        "worker:media": "bun --env-file=../../.env run src/media/worker.ts"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.1090.0",
+        "@aws-sdk/s3-request-presigner": "^3.1090.0",
+        "@elysiajs/cors": "^1.2.0",
+        "@elysiajs/swagger": "^1.3.1",
+        "@zipo/shared": "workspace:*",
+        "better-auth": "^1.2.0",
+        "drizzle-orm": "^0.45.2",
+        "elysia": "^1.2.25",
+        "ioredis": "^5.4.2",
+        "mercadopago": "3.2.1",
+        "nanoid": "^5.0.9",
+        "postgres": "^3.4.5",
+        "sanitize-html": "^2.14.0",
+        "sharp": "^0.35.3",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@types/bun": "1.3.14",
+        "@types/sanitize-html": "^2.13.0",
+        "drizzle-kit": "^0.31.0",
+        "typescript": "^5.7.2"
+    }
+}

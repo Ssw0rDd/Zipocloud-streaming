@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">ZiPo</title>
+  <rect width="512" height="512" rx="112" fill="#f2f5ee"/>
+  <rect x="72" y="72" width="368" height="368" rx="88" fill="#ffffff" stroke="#dfe7d7" stroke-width="12"/>
+  <path d="M147 163h218v54L230 349h139v58H139v-55l134-131H147z" fill="#1a1a1a"/>
+  <circle cx="365" cy="163" r="27" fill="#7cb87c"/>
+</svg>

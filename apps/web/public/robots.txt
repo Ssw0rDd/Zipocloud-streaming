@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /*/cinema/
+Disallow: /*/watch/
+Disallow: /*/auth/
+Disallow: /*/profile/
+Disallow: /*/clip/
+Disallow: /*/offline
+
+Sitemap: /sitemap.xml

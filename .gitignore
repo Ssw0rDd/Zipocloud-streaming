@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+
+# Env secrets (keep *.example templates)
+.env
+.env.*
+!.env.example
+!**/.env*.example
+
+# Build outputs
+dist/
+**/dist/
+**/.next
+**/.next-*
+*.tsbuildinfo
+.turbo
+
+# Logs
+*.log
+
+# OS / IDE junk
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Local agent / skill artifacts
+.skill-build/
+
+# Secrets and local media data
+/secrets/
+/data/
+**/jobs.sqlite3
+/data/protected-streams/
+.zipo-cookie-jar
+
+# Cloudflared: install CLI yourself; never commit the binary
+tools/cloudflared/*.exe
+tools/cloudflared/*.log
+
+# Test / report outputs
+test-results/
+playwright-report/
+coverage/
+/security/pentest/reports/*.json
+apps/api/security-report.json
+
+# Python
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+.venv/
+**/.venv/
+*.pyc

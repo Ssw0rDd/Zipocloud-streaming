@@ -1,0 +1,17 @@
+node_modules
+**/node_modules
+**/.next
+**/dist
+.git
+.github
+.skill-build
+.env
+.env.*
+!.env.example
+*.log
+desktop.ini
+coverage
+tmp
+secrets
+**/__pycache__
+**/.pytest_cache
