@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="docs/assets/zipo-banner.svg" alt="ZiPo — self-hosted streaming monorepo" width="720" />
+  <img
+    src="https://raw.githubusercontent.com/Ssw0rDd/Zipocloud-streaming/main/docs/assets/zipo-banner.svg"
+    alt="ZiPo — self-hosted streaming monorepo"
+    width="720"
+  />
 </p>
 
 <p align="center">
