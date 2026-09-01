@@ -1,4 +1,4 @@
-FROM oven/bun:1.3.14-alpine AS base
+FROM oven/bun:1.4.0-alpine AS base
 WORKDIR /app
 
 FROM base AS deps
@@ -15,7 +15,7 @@ COPY . .
 WORKDIR /app/apps/api
 RUN bun run build
 
-FROM oven/bun:1.3.14-alpine AS runner
+FROM oven/bun:1.4.0-alpine AS runner
 WORKDIR /app/apps/api
 ENV NODE_ENV=production
 RUN apk add --no-cache ffmpeg
