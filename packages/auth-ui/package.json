@@ -22,8 +22,8 @@
     "@zipo/api-client": "workspace:*"
   },
   "devDependencies": {
-    "@types/bun": "1.3.14",
-    "typescript": "^5.7.2"
+    "@types/bun": "1.4.2",
+    "typescript": "^7.0.2"
   },
   "files": ["dist", "README.md", "custom-elements.json"],
   "publishConfig": {
