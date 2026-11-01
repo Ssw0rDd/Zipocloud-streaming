@@ -1,4 +1,4 @@
-FROM node:22.22.3-alpine3.23 AS base
+FROM node:26.13.0-alpine3.23 AS base
 WORKDIR /app
 RUN corepack enable
 
@@ -23,7 +23,7 @@ ENV NEXT_PUBLIC_CINEMA_ENABLED=$NEXT_PUBLIC_CINEMA_ENABLED
 WORKDIR /app/apps/web
 RUN pnpm build
 
-FROM node:22.22.3-alpine3.23 AS runner
+FROM node:26.13.0-alpine3.23 AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
